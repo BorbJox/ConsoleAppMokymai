@@ -98,21 +98,29 @@
             //Console.WriteLine($"Second letter: {name[1]}");
             //Console.WriteLine($"Name length: {name.Length}");
 
-            var face = @"
-       *************
-     **             **
-    **   ()     ()   **
-   **        |        **
-   **        |        **
-    **   *       *   **
-     **    * * *    **
-       *************
-";
+            //            var face = @"
+            //       *************
+            //     **             **
+            //    **   ()     ()   **
+            //   **        |        **
+            //   **        |        **
+            //    **   *       *   **
+            //     **    * * *    **
+            //       *************
+            //";
 
-            Console.WriteLine(face);
+            //            Console.WriteLine(face);
 
-            Console.WriteLine(face.Replace('*', '"'));
+            //            Console.WriteLine(face.Replace('*', '"'));
 
+            Console.WriteLine("Enter two digits:");
+            var first = (int)Console.ReadKey().KeyChar - 48;
+            var second = (int)Console.ReadKey().KeyChar - 48;
+            Console.WriteLine();
+            Console.WriteLine($"Sum: {first + second}");
+            Console.WriteLine($"Subtract: {first - second}");
+            Console.WriteLine($"Multiply: {first * second}");
+            Console.WriteLine($"Divide: {(double)first / second}");
         }
     }
 }
