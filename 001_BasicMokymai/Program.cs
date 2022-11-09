@@ -5,42 +5,30 @@
         static void Main(string[] args)
         {
             //            Console.WriteLine("Hello, aliens! Oooh-lala 👽");
-
             //            Console.Write(" added a lil");
             //            Console.Write(" something here ;)\n");
-
             //            Console.Beep();
-
             //            var compo = "output";
-
             //            Console.WriteLine("composition {0} things", compo);
-
             //            Console.WriteLine($"Interpolation {compo} things...");
-
             //            Console.WriteLine("Col1\tCol2\tCol3");
             //            Console.WriteLine("Row1\r\nRow2\r\nRow3\r\n");
             //            Console.WriteLine($"Row 1{Environment.NewLine}Row 2{Environment.NewLine}Row 3");
-
             //            Console.WriteLine("\"Very\" important text");
-
             //            //Console.WriteLine("---- Any key to continue ----");
             //            //Console.ReadKey();
             //            //Console.Clear();
-
             //            //Console.WriteLine("Your input:");
             //            //Console.Write(Environment.NewLine);
             //            //var input = Console.ReadKey();
             //            //Console.WriteLine();
             //            //Console.WriteLine(input);
-
             //            //Console.WriteLine("Try again:");
             //            //input = Console.ReadKey();
             //            //Console.WriteLine();
             //            //Console.WriteLine(input.KeyChar);
             //            //Console.WriteLine(input.Key);
-
             //            //Console.WriteLine("".PadRight(30, 'a'));
-
             //            Console.WriteLine("I SHALL GUESS THE FIRST CHARACTER YOU ENTEEEER! 🧙‍");
             //            var name = Console.ReadLine();
             //            name ??= "";
@@ -53,7 +41,6 @@
             //            Console.WriteLine("Vee" +
             //                "sadas" +
             //                "deee");
-
             //            Console.WriteLine(@"
             //adsad
             //sadas
