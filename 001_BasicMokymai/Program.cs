@@ -88,12 +88,15 @@
             //        break;
             //}
 
-            Console.WriteLine("L\r\nA\r\nB\r\nA\r\nS");
-            Console.WriteLine("L\tA\tB\tA\tS");
-            Console.WriteLine("\"LABAS\"");
-            Console.WriteLine("{0}LABAS{0}", '\x22');
+            //Console.WriteLine("L\r\nA\r\nB\r\nA\r\nS");
+            //Console.WriteLine("L\tA\tB\tA\tS");
+            //Console.WriteLine("\"LABAS\"");
+            //Console.WriteLine("{0}LABAS{0}", '\x22');
 
-
+            Console.WriteLine("your name please:");
+            var name = Console.ReadLine();
+            Console.WriteLine($"Second letter: {name[1]}");
+            Console.WriteLine($"Name length: {name.Length}");
         }
     }
 }
