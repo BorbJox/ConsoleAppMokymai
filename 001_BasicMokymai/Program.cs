@@ -93,10 +93,26 @@
             //Console.WriteLine("\"LABAS\"");
             //Console.WriteLine("{0}LABAS{0}", '\x22');
 
-            Console.WriteLine("your name please:");
-            var name = Console.ReadLine();
-            Console.WriteLine($"Second letter: {name[1]}");
-            Console.WriteLine($"Name length: {name.Length}");
+            //Console.WriteLine("your name please:");
+            //var name = Console.ReadLine();
+            //Console.WriteLine($"Second letter: {name[1]}");
+            //Console.WriteLine($"Name length: {name.Length}");
+
+            var face = @"
+       *************
+     **             **
+    **   ()     ()   **
+   **        |        **
+   **        |        **
+    **   *       *   **
+     **    * * *    **
+       *************
+";
+
+            Console.WriteLine(face);
+
+            Console.WriteLine(face.Replace('*', '"'));
+
         }
     }
 }
