@@ -4,123 +4,101 @@
     {
         static void Main(string[] args)
         {
-            //            Console.WriteLine("Hello, aliens! Oooh-lala 👽");
-            //            Console.Write(" added a lil");
-            //            Console.Write(" something here ;)\n");
-            //            Console.Beep();
-            //            var compo = "output";
-            //            Console.WriteLine("composition {0} things", compo);
-            //            Console.WriteLine($"Interpolation {compo} things...");
-            //            Console.WriteLine("Col1\tCol2\tCol3");
-            //            Console.WriteLine("Row1\r\nRow2\r\nRow3\r\n");
-            //            Console.WriteLine($"Row 1{Environment.NewLine}Row 2{Environment.NewLine}Row 3");
-            //            Console.WriteLine("\"Very\" important text");
-            //            //Console.WriteLine("---- Any key to continue ----");
-            //            //Console.ReadKey();
-            //            //Console.Clear();
-            //            //Console.WriteLine("Your input:");
-            //            //Console.Write(Environment.NewLine);
-            //            //var input = Console.ReadKey();
-            //            //Console.WriteLine();
-            //            //Console.WriteLine(input);
-            //            //Console.WriteLine("Try again:");
-            //            //input = Console.ReadKey();
-            //            //Console.WriteLine();
-            //            //Console.WriteLine(input.KeyChar);
-            //            //Console.WriteLine(input.Key);
-            //            //Console.WriteLine("".PadRight(30, 'a'));
-            //            Console.WriteLine("I SHALL GUESS THE FIRST CHARACTER YOU ENTEEEER! 🧙‍");
-            //            var name = Console.ReadLine();
-            //            name ??= "";
-            //            var output = name[0];
-            //            if (name.Length <= 0)
-            //            {
-            //                output = '\u4566';
-            //            }
-            //            Console.WriteLine($"IT IS.... ✨\"{output}\"!!!✨");
-            //            Console.WriteLine("Vee" +
-            //                "sadas" +
-            //                "deee");
-            //            Console.WriteLine(@"
-            //adsad
-            //sadas
-            //fff
-            //");
+            var a = 5;
+            var b = 6;
 
+            if ( ++a == b || b++ == a++ )
+            {
+                b++;
+            }
+            Console.WriteLine(a + " " + b);
 
-            //Console.WriteLine("Type in your name please:");
-            //var name = Console.ReadLine();
-            //Console.WriteLine();
-            //Console.WriteLine($"Your name is: {name}");
+            //Console.WriteLine("Please type in a number");
 
-            //if (name == null || name.Length == 0)
+            //var input = Console.ReadLine();
+            //int number = Convert.ToInt32(input);
+            //if (number % 2 == 0)
             //{
-            //    name = " ";
+            //    Console.WriteLine("Number is even");
+            //} else if (number % 2 != 0)
+            //{
+            //    Console.WriteLine("Number is odd");
+            //} else
+            //{
+            //    Console.WriteLine($"You typed in {number}");
             //}
-            //var code = (int)name[0];
-            //Console.WriteLine($"First letter ASCII code is: {code}");
 
-            //Console.WriteLine("Type in a number:");
-            //var number = int.Parse(Console.ReadLine() ?? "0");
-            //var result = code + number;
-            //Console.WriteLine($"Number added to ASCII code: {result}");
-            //Console.WriteLine("Result {0}", result);
-            //Console.WriteLine("Result {0:X}", result);
-            //Console.WriteLine("Result {0:C}", result);
+            //Console.WriteLine("Please type in number of band members.");
 
+            //var input2 = Console.ReadLine();
+            //int number2 = Convert.ToInt32(input2);
 
-            //Console.WriteLine($"(1) Buy {Environment.NewLine}(2) Sell {Environment.NewLine}(3) Inventory");
-            //var key = Console.ReadKey();
-            //Console.WriteLine();
-            //switch (key.KeyChar)
+            //if (number2 == 1)
             //{
-            //    case '1':
-            //        Console.WriteLine("Buying...");
+            //    Console.WriteLine("It's a solo act");
+            //} else if (number2 == 2)
+            //{
+            //    Console.WriteLine("It's a duo");
+            //} else if (number2 > 2 && number2 < 10)
+            //{
+            //    Console.WriteLine("It's a band");
+            //} else if (number2 >= 10)
+            //{
+            //    Console.WriteLine("It's a chorus");
+            //} else
+            //{
+            //    Console.WriteLine($"Error. You typed in an unsupported number probably ({number2}).");
+            //}
+
+            //Console.WriteLine("Please type in hours worked");
+            //var input3 = Console.ReadLine();
+            //int number3 = Convert.ToInt32(input3);
+
+            //if (number3 < 160) 
+            //{
+            //    Console.WriteLine($"You need to work {160 - number3} more hours.");
+            //} else if (number3 == 160)
+            //{
+            //    Console.WriteLine("You have worked full time");
+            //} else if (number3 > 160)
+            //{
+            //    Console.WriteLine($"You have worked {number3 - 160} overtime hours.");
+            //}
+
+            //Console.WriteLine("Please write the grade for the exam");
+            //var input4 = Console.ReadLine();
+            //int number4 = Convert.ToInt32(input4);
+            //switch (number4)
+            //{
+            //    case 0:
+            //    case 1:
+            //    case 2:
+            //    case 3:
+            //    case 4:
+            //        Console.WriteLine("Failed");
             //        break;
-            //    case '2':
-            //        Console.WriteLine("Selling...");
+            //    case 5:
+            //        Console.WriteLine("Weak");
             //        break;
-            //    case '3':
-            //        Console.WriteLine("Inventory...");
+            //    case 6:
+            //        Console.WriteLine("Satisfactory");
+            //        break;
+            //    case 7:
+            //        Console.WriteLine("Average");
+            //        break;
+            //    case 8:
+            //        Console.WriteLine("Ok");
+            //        break;
+            //    case 9:
+            //        Console.WriteLine("Very good");
+            //        break;
+            //    case 10:
+            //        Console.WriteLine("Excellent");
             //        break;
             //    default:
-            //        Console.WriteLine("I'm not sure what you want to do.");
+            //        Console.WriteLine($"Unknown grade ({number4})");
             //        break;
             //}
-
-            //Console.WriteLine("L\r\nA\r\nB\r\nA\r\nS");
-            //Console.WriteLine("L\tA\tB\tA\tS");
-            //Console.WriteLine("\"LABAS\"");
-            //Console.WriteLine("{0}LABAS{0}", '\x22');
-
-            //Console.WriteLine("your name please:");
-            //var name = Console.ReadLine();
-            //Console.WriteLine($"Second letter: {name[1]}");
-            //Console.WriteLine($"Name length: {name.Length}");
-
-            //            var face = @"
-            //       *************
-            //     **             **
-            //    **   ()     ()   **
-            //   **        |        **
-            //   **        |        **
-            //    **   *       *   **
-            //     **    * * *    **
-            //       *************
-            //";
-
-            //            Console.WriteLine(face);
-
-            //            Console.WriteLine(face.Replace('*', '"'));
-
-            Console.WriteLine("Enter two digits:");
-            var first = (int)Console.ReadKey().KeyChar - 48;
-            var second = (int)Console.ReadKey().KeyChar - 48;
-            Console.WriteLine();
-            Console.WriteLine($"Sum: {first + second}");
-            Console.WriteLine($"Subtract: {first - second}");
-            Console.WriteLine($"Multiply: {first * second}");
-            Console.WriteLine($"Divide: {(double)first / second}");
         }
     }
 }
