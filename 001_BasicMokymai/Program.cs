@@ -1,10 +1,108 @@
-﻿using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace _001_BasicMokymai
 {
     internal class Program
     {
         static void Main(string[] args)
+        {
+            Console.WriteLine(Program.IfNumberContains3(54654));
+            Console.WriteLine(Program.IfYearIsLeap(2004));
+            Console.WriteLine(Program.PositiveNegativeOrZero(-0.0000000000001));
+        }
+
+        
+        static int DivisbleBy2Or3(int first, int second)
+        {
+            if ((first % 2 == 0 && first % 3 == 0) && (second % 2 == 0 || second % 3 == 0))
+            {
+                return first * second;
+            } else
+            {
+                return first + second;
+            }
+        }
+
+        static string PositiveNegativeOrZero(double number)
+        {
+            if (number > 0)
+            {
+                return "positive";
+            } else if (number < 0)
+            {
+                return "negative";
+            } else
+            {
+                return "zero";
+            }
+        }
+
+        static bool IfYearIsLeap(int number)
+        {
+            if (number % 4 == 0) { 
+                if (number % 100 == 0)
+                {
+                    if (number % 400 == 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                } else
+                {
+                    return true;
+                }
+            } else
+            {
+                return false;
+            }
+        }
+
+        static bool IfNumberContains3(int number)
+        {
+            while (number > 0)
+            {
+                if (number % 10 == 3)
+                {
+                    return true;
+                } else
+                {
+                    number /= 10;
+                }
+            }
+            return false;
+        }
+
+        static void CubeInput()
+        {
+            string input = Console.ReadLine() ?? "0";
+            double number = Convert.ToDouble(input);
+            Console.WriteLine(TheCubeOf(number));
+        }
+
+        static double TheCubeOf(double number)
+        {
+            return number * number * number;
+        }
+
+        static void CheckAgeAllowed()
+        {
+            string? input = Console.ReadLine();
+            if (input != null)
+            {
+                int age = Convert.ToInt32(input);
+                bool isAllowed = age >= 21 && age <= 90;
+                if (!isAllowed)
+                {
+                    Console.WriteLine("Not a proper age");
+                }
+            }
+        }
+
+        static void OldStuff()
         {
 
             //Taks #4 Find, describe, and fix a bug in your app
