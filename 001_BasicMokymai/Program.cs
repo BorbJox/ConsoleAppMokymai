@@ -1,17 +1,40 @@
-﻿namespace _001_BasicMokymai
+﻿using System.Threading.Tasks;
+
+namespace _001_BasicMokymai
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var a = 5;
-            var b = 6;
 
-            if ( ++a == b || b++ == a++ )
-            {
-                b++;
-            }
-            Console.WriteLine(a + " " + b);
+            //Taks #4 Find, describe, and fix a bug in your app
+
+            double weeklyPay = 600;
+            double dailyEarnings = weeklyPay / 7;
+            Console.WriteLine(dailyEarnings);
+
+            //Task 3: Find and fix
+
+            Console.WriteLine("Temp in degrees C:");
+            string input = Console.ReadLine();
+            double degreesC = Convert.ToDouble(input);
+            Console.WriteLine("Degrees K: " + (degreesC + 273.15));
+
+            //Task 2:
+
+            string day = "Wednesday";
+            Console.WriteLine($"{day}");
+
+
+
+            //var a = 5;
+            //var b = 6;
+
+            //if ( ++a == b || b++ == a++ )
+            //{
+            //    b++;
+            //}
+            //Console.WriteLine(a + " " + b);
 
             //Console.WriteLine("Please type in a number");
 
