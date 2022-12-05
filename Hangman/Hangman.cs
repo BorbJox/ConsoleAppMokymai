@@ -46,6 +46,7 @@ namespace Hangman
             {
                 DrawGuess();
                 DrawArt();
+                DrawWrongGuesses();
                 ReadGuess();
                 CheckGuess();
             }
@@ -104,8 +105,14 @@ namespace Hangman
             {
                 Console.WriteLine("Wrong.");
                 lives--;
-                wrongGuesses.Append<char>(lastGuess);
+                Array.Resize<char>(ref wrongGuesses, wrongGuesses.Length + 1);
+                wrongGuesses[wrongGuesses.Length - 1] = lastGuess;
             }
+        }
+
+        private void DrawWrongGuesses()
+        {
+            Console.WriteLine("Wrong guesses: {0}", new string(wrongGuesses));
         }
 
         private void ReadGuess()
