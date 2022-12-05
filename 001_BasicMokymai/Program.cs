@@ -7,12 +7,71 @@ namespace _001_BasicMokymai
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Program.IfNumberContains3(54654));
-            Console.WriteLine(Program.IfYearIsLeap(2004));
-            Console.WriteLine(Program.PositiveNegativeOrZero(-0.0000000000001));
+
         }
 
-        
+        static string CompressString(string input)
+        {
+            char? previousLetter = null;
+            int increment = 0;
+            string output = "";
+            foreach (char letter in input)
+            {
+                if (previousLetter != null)
+                {
+                    if (previousLetter == letter)
+                    {
+                        increment++;
+                    } else
+                    {
+                        output = output + previousLetter + Convert.ToString(increment);
+                        increment = 1;
+                        previousLetter = letter;
+                    }
+                } else
+                {
+                    previousLetter = letter;
+                    increment++;
+                }
+            }
+            output = output + previousLetter + Convert.ToString(increment);
+            return output;
+        }
+
+        static string MakeUppercase(string input)
+        {
+            string output = "";
+            for(int i = 0; i < input.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    output += Char.ToUpper(input[i]);
+                } else
+                {
+                    output += Char.ToLower(input[i]);
+                }
+            }
+            return output;
+        }
+
+        static bool IsPalindromeRecursion(string input)
+        {
+            if (input.Length >= 2)
+            {
+                if (input[0] == input[input.Length - 1])
+                {
+                    return IsPalindromeRecursion(input.Substring(1, input.Length - 2));
+                }
+                else
+                {
+                    return false;
+                }
+            } else
+            {
+                return true;
+            }
+        }
+
         static int DivisbleBy2Or3(int first, int second)
         {
             if ((first % 2 == 0 && first % 3 == 0) && (second % 2 == 0 || second % 3 == 0))
@@ -114,7 +173,7 @@ namespace _001_BasicMokymai
             //Task 3: Find and fix
 
             Console.WriteLine("Temp in degrees C:");
-            string input = Console.ReadLine();
+            string input = Console.ReadLine() ?? "";
             double degreesC = Convert.ToDouble(input);
             Console.WriteLine("Degrees K: " + (degreesC + 273.15));
 
