@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppMokymai", "ConsoleAppMokymai\ConsoleAppMokymai.csproj", "{4FA96475-A339-4A0D-873A-2DDC50A8F533}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "001_BasicMokymai", "001_BasicMokymai\001_BasicMokymai.csproj", "{638B309C-4D94-4EF1-A19C-965B3579FDE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "001_BasicMokymai", "001_BasicMokymai\001_BasicMokymai.csproj", "{638B309C-4D94-4EF1-A19C-965B3579FDE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangman", "Hangman\Hangman.csproj", "{9E709B38-DA5B-4EF7-9682-489B64A1F94E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{638B309C-4D94-4EF1-A19C-965B3579FDE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{638B309C-4D94-4EF1-A19C-965B3579FDE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{638B309C-4D94-4EF1-A19C-965B3579FDE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E709B38-DA5B-4EF7-9682-489B64A1F94E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E709B38-DA5B-4EF7-9682-489B64A1F94E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E709B38-DA5B-4EF7-9682-489B64A1F94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E709B38-DA5B-4EF7-9682-489B64A1F94E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
