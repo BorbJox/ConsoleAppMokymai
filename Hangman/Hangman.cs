@@ -59,7 +59,7 @@ namespace Hangman
                 Console.WriteLine("CONGRATULATIONS!\r\nYou Won!");
             }
 
-            Console.WriteLine("The word was: {0}", chosenWord);
+            Console.WriteLine($"The word was: {chosenWord}");
             Console.WriteLine("Try again? (y/n)");
             char pressed = Char.ToLower(Console.ReadKey().KeyChar);
             if (pressed == 'y')
@@ -112,7 +112,7 @@ namespace Hangman
 
         private void DrawWrongGuesses()
         {
-            Console.WriteLine("Wrong guesses: {0}", new string(wrongGuesses));
+            Console.WriteLine($"Wrong guesses: {new string(wrongGuesses)}");
         }
 
         private void ReadGuess()
