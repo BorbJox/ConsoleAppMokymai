@@ -9,19 +9,19 @@ namespace _001_BasicMokymai
 {
     internal class Deletages
     {
-        private delegate bool Filter(Person person);
+        private delegate bool Filter(Persona person);
 
         public static void Run()
         {
-            List<Person> list = new List<Person>();
+            List<Persona> list = new List<Persona>();
             var random = new Random();
 
             for (int i = 0; i < 100; i++)
             {
-                list.Add(new Person(GenerateName(), random.Next(100)));
+                list.Add(new Persona(GenerateName(), random.Next(100)));
             }
 
-            Filter checkChild = delegate (Person person)
+            Filter checkChild = delegate (Persona person)
             {
                 return person.age < 18;
             };
@@ -33,10 +33,10 @@ namespace _001_BasicMokymai
             DisplayPeople("Seniors: ", list, IsSenior);
         }
 
-        private static void DisplayPeople(string title, List<Person> people, Filter filter)
+        private static void DisplayPeople(string title, List<Persona> people, Filter filter)
         {
             int count = 0;
-            foreach (Person p in people)
+            foreach (Persona p in people)
             {
                 if (filter(p))
                 {
@@ -46,17 +46,17 @@ namespace _001_BasicMokymai
             Console.WriteLine(title + count);
         }
 
-        private static bool IsChild(Person person)
+        private static bool IsChild(Persona person)
         {
             return person.age < 18;
         }
 
-        private static bool IsAdult(Person person)
+        private static bool IsAdult(Persona person)
         {
             return person.age >= 18;
         }
 
-        private static bool IsSenior(Person person)
+        private static bool IsSenior(Persona person)
         {
             return person.age >= 65;
         }
@@ -76,9 +76,9 @@ namespace _001_BasicMokymai
         }
 }
 
-    internal class Person
+    internal class Persona
     {
-        public Person(string name, int age)
+        public Persona(string name, int age)
         {
             this.name = name;
             this.age = age;
