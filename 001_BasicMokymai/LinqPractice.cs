@@ -7,79 +7,97 @@ using System.Threading.Tasks;
 
 namespace _001_BasicMokymai
 {
-    internal class LinqPractice
+    internal class InterfacesLesson
     {
         public static void Run()
         {
-            FilesPlayground();
+            BmwCar car = new BmwCar();
+            car.Drive();
+            car.Refuel(12);
+            car.Drive();
+            Console.WriteLine(car.IsXDrive);
 
-            
-
+            AudiCar car2 = new AudiCar();
+            car2.Drive();
+            car2.Refuel(0);
+            car2.Refuel(-2);
+            car2.Refuel(1);
+            car2.Drive();
+            car2.Drive();
+            car2.Drive();
+            car2.IsQuattro = true;
+            Console.WriteLine(car2.IsQuattro);
         }
 
-        public static void FilesPlayground()
+        interface IVehicle
         {
-            IEnumerable<string> files = Directory.EnumerateFiles(@"D:\Jox\Desktop");
+            public void Drive();
+            public void Refuel(int amount);
+        }
 
-            IEnumerable<string> txtFiles = files
-                .Where(file => file.EndsWith(".jpg"))
-                .Select(file => file[(file.LastIndexOf('\\') + 1)..]);
-
-            foreach (string file in txtFiles)
+        abstract class Car : IVehicle
+        {
+            public Car(string modelName) { 
+                Model = modelName;
+            }
+            public string Model { get; set; }
+            public int Fuel { get; protected set; }
+            public void Drive()
             {
-                Console.WriteLine(file);
+                if (Fuel > 0)
+                {
+                    Fuel--;
+                    Console.WriteLine($"Wrooom. Used 1 fuel. {Fuel} left.");
+                } else
+                {
+                    Console.WriteLine("Oh no! Out of fuel!");
+                }   
+            }
+
+            public void Refuel(int amount)
+            {
+                if (amount < 0)
+                {
+                    Console.WriteLine("You can't siphon fuel!");
+                    return;
+                }
+
+                if (amount == 0)
+                {
+                    Console.WriteLine("Your can is empty. What are you refueling with?");
+                    return;
+                }
+
+                if (Fuel + amount <= 10)
+                {
+                    Fuel += amount;
+                    Console.WriteLine($"Glug glug. Refueling. Now I have {Fuel} fuel.");
+                } else
+                {
+                    Console.WriteLine("No! Don't do it! It'll overfill!");
+                    Console.WriteLine($"Look what you did.. You spilled {Fuel + amount - 10} fuel on the floor..");
+                    Fuel = 10;
+                }
             }
         }
 
-        public static void PetsPlayground()
+        class BmwCar : Car
         {
-            List<Person> people = new List<Person>();
-            people.Add(new Person { Pets = new List<Pet> { new Pet("Aaron", 17), new Pet("Beaver", 2) } });
-            people.Add(new Person { Pets = new List<Pet> { new Pet("Anne", 5), new Pet("Kitty", 8), new Pet("Robert", 7) } });
-            people.Add(new Person { Pets = new List<Pet> { new Pet("Agnes", 1) } });
-            people.Add(new Person { Pets = new List<Pet> { new Pet("Slime", 12), new Pet("Woofer", 16) } });
-            people.Add(new Person { Pets = new List<Pet> { new Pet("Chirpy", 2) } });
-
-            IEnumerable<Pet> pets = people.SelectMany(people => people.Pets);
-
-            foreach (Pet pet in pets)
+            public BmwCar() : base("BMW")
             {
-                Console.WriteLine($"Pet: {pet.Name} age {pet.Age}");
+
             }
 
-            IEnumerable<Pet> aPets = people.SelectMany(people => people.Pets).Where(pet => pet.Name[0] == 'A');
-
-            foreach (Pet pet in aPets)
+            public bool IsXDrive { get; set; }
+        }
+        class AudiCar : Car
+        {
+            public AudiCar() : base("Audi")
             {
-                Console.WriteLine($"A Pet: {pet.Name} age {pet.Age}");
+
             }
 
-            IEnumerable<Pet> aFivePets = people.SelectMany(people => people.Pets).Where(pet => pet.Name[0] == 'A').Where(pet => pet.Age > 5);
-
-            foreach (Pet pet in aFivePets)
-            {
-                Console.WriteLine($"A Pet 5+: {pet.Name} age {pet.Age}");
-            }
+            public bool IsQuattro { get; set; }
         }
-    }
-
-    internal class Person
-    {
-        public Person()
-        {
-            Pets = new List<Pet>();
-        }
-        public List<Pet> Pets { get; set; }
-    }
-
-    internal class Pet
-    {
-        public Pet(string name, int age) 
-        {
-            Name = name;
-            Age = age;
-        }
-        public string Name { get; set; }
-        public int Age { get; set; }
     }
 }

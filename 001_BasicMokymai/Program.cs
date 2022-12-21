@@ -7,7 +7,7 @@ namespace _001_BasicMokymai
     {
         static void Main(string[] args)
         {
-            LinqPractice.Run();
+            InterfacesLesson.Run();
         }
 
         static string CompressString(string input)
